@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>لعبة العشّاق 💕</title>
+
+<style>
+body {
+  background: linear-gradient(135deg,#ff4d6d,#ff758f);
+  font-family: Arial;
+  text-align: center;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+.box {
+  background: rgba(0,0,0,0.2);
+  padding: 30px;
+  border-radius: 20px;
+  margin: 60px 20px;
+}
+button {
+  background: white;
+  color: #ff4d6d;
+  border: none;
+  padding: 15px 25px;
+  font-size: 18px;
+  border-radius: 25px;
+  margin-top: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+  <h1>💞 لعبة العشّاق 💞</h1>
+  <h2 id="q">اضغط لبدء اللعبة 😍</h2>
+  <button onclick="nextQ()">التالي 💕</button>
+</div>
+
+<script>
+const q = [
+"من أكثر شخص يشتاق؟ ❤️",
+"قبلة الآن أم حضن طويل؟ 😘",
+"أكثر شيء تحبه بي؟ 😍",
+"لو كنت أمامي الآن ماذا تفعل؟ 🔥",
+"اختار: مكالمة أو لقاء؟ 💭",
+"كلمة تحب تسمعها مني؟ 💌",
+"هل تحب الغيرة؟ 😏",
+"أين أول موعد نروحه؟ 🌙"
+];
+let i = 0;
+function nextQ(){
+  document.getElementById("q").innerText = q[i];
+  i++;
+  if(i >= q.length) i = 0;
+}
+</script>
+
+</body>
+</html>
